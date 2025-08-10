@@ -13,7 +13,9 @@ connectDb();
 app.use(express.json());
 app.use(cookieParser());
 const allowedOrigins=['http://localhost:5173']
-app.use(cors({origin:allowedOrigins,credentials:true}))
+
+app.use(cors({origin:true,credentials:true}))
+
 app.get('/',(req,res)=>
 {
     res.send("API is working");

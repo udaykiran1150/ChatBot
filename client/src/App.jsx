@@ -5,7 +5,11 @@ import Login from './pages/Login.jsx'
 import EmailVerify from './pages/EmailVerify.jsx'
 import ResetPassword from './pages/ResetPassword.jsx'
 import {ToastContainer} from 'react-toastify';
+
+import ChattingPage from './pages/ChattingPage.jsx'
 import 'react-toastify/dist/ReactToastify.css'
+
+
 
 
 const App = () => {
@@ -20,10 +24,14 @@ const App = () => {
       <Route path='/login' element={<Login/>}/>
       <Route path='/email-verify' element={<EmailVerify/>}/>
       <Route path='/reset-password' element={<ResetPassword/>}/>
+      <Route path='/chat-area' element={<ChattingPage/>}/>
+     
     </Routes> 
    
    
     </>
+
+    
   )
 }
 

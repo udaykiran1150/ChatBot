@@ -37,6 +37,7 @@ const ResetPassword = () => {
         inputrefs.current[index].value = char;
       }
     });
+    
     inputrefs.current[pasteArray.length - 1].focus();
   };
 

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { AppContent } from '../Context/AppContext.jsx'
 import { toast } from 'react-toastify'
 import axios from 'axios'
+import { CiHome } from "react-icons/ci";
 const NavBar = () => {
 
     const navigate=useNavigate()
@@ -45,7 +46,8 @@ const NavBar = () => {
     }
   return (
     <div className='w-full flex justify-between p-4 items-center sm:p-6 sm:px-24 absolute top-0'>
-        <img src={assets.logo}  className='w-28 sm:32'alt="" />
+        
+        <CiHome  className=' h-9 w-28 sm:32' />
               {userData?
                  <div className='h-8 w-8  flex rounded-full bg-black justify-center items-center text-white relative group'>
                   {userData.name[0].toUpperCase()}
