@@ -14,7 +14,7 @@ const NavBar = () => {
     const verifyAccount=async()=>
     {
       try {
-        
+         
         axios.defaults.withCredentials=true;
         const {data}=await axios.post(backendUrl+'/api/auth/send-verify-otp')
         if(data.success)
@@ -47,7 +47,7 @@ const NavBar = () => {
   return (
     <div className='w-full flex justify-between p-4 items-center sm:p-6 sm:px-24 absolute top-0'>
         
-        <CiHome  className=' h-9 w-28 sm:32' />
+        <CiHome  className=' h-9 w-28 sm:32' onClick={()=>navigate('/')} />
               {userData?
                  <div className='h-8 w-8  flex rounded-full bg-black justify-center items-center text-white relative group'>
                   {userData.name[0].toUpperCase()}
